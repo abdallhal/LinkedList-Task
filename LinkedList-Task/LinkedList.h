@@ -37,5 +37,12 @@ public:
 	void InsertAfter(int key, char data);
 	void InsertBefore(int key, char data);
 	void InsertEnd(int key, char data);
+	void DeleteNode();
+	void DeleteFirst();
+	void DeleteEnd();
+	void MakeListEmpty();
+	bool Search(const int& k);
+	void Traverse();
+	void OrderInsert(const char & d, const int& k);
 };
 
