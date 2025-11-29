@@ -22,8 +22,11 @@ public:
 	bool isEmpty();
 	bool CursorIsEmpty();
 	void ToFirst();
+	void ToEnd();	
 	bool AtFirst();
+	bool AtEnd();
 	void Advance();
+
 
 
 };

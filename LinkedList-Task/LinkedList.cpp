@@ -14,9 +14,23 @@ bool LinkedList::CursorIsEmpty() {
 void LinkedList::ToFirst() {
 	cursor = head;
 }
+void LinkedList::ToEnd() {
+	ToFirst();
+	if (!isEmpty()) {
+		while (cursor->next != nullptr) {
+			Advance();
+		}
+	}
+
+}
+
 bool LinkedList::AtFirst() {
 	// if cursor is at head or list is empty and cursor is also empty
 	return (cursor == head)||(isEmpty()&&CursorIsEmpty());	
+}
+bool LinkedList::AtEnd() {
+	
+	return ( cursor->next == nullptr)||(isEmpty()&&CursorIsEmpty());	
 }
 void LinkedList::Advance() {
 
