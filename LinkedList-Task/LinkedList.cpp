@@ -14,3 +14,7 @@ bool LinkedList::CursorIsEmpty() {
 void LinkedList::ToFirst() {
 	cursor = head;
 }
+bool LinkedList::AtFirst() {
+	// if cursor is at head or list is empty and cursor is also empty
+	return (cursor == head)||(isEmpty()&&CursorIsEmpty());	
+}

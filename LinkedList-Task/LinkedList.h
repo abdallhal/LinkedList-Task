@@ -22,6 +22,7 @@ public:
 	bool isEmpty();
 	bool CursorIsEmpty();
 	void ToFirst();
+	bool AtFirst();
 
 
 };
