@@ -26,7 +26,7 @@ public:
 	bool AtFirst();
 	bool AtEnd();
 	void Advance();
-
+	int ListSize();
 
 
 };

@@ -6,7 +6,7 @@ LinkedList::LinkedList() {
 	cursor = nullptr;
 }
 bool LinkedList::isEmpty() {
-	return head == nullptr;	
+	return head == nullptr;
 }
 bool LinkedList::CursorIsEmpty() {
 	return cursor == nullptr;
@@ -26,11 +26,11 @@ void LinkedList::ToEnd() {
 
 bool LinkedList::AtFirst() {
 	// if cursor is at head or list is empty and cursor is also empty
-	return (cursor == head)||(isEmpty()&&CursorIsEmpty());	
+	return (cursor == head) || (isEmpty() && CursorIsEmpty());
 }
 bool LinkedList::AtEnd() {
-	
-	return ( cursor->next == nullptr)||(isEmpty()&&CursorIsEmpty());	
+
+	return (cursor->next == nullptr) || (isEmpty() && CursorIsEmpty());
 }
 void LinkedList::Advance() {
 
@@ -38,3 +38,16 @@ void LinkedList::Advance() {
 		prev = cursor;
 		cursor = cursor->next;
 	}
+}
+int LinkedList::ListSize() {
+	int count = 0;
+	Node* temp = head;
+	if(!isEmpty()) {
+		while (temp != nullptr) {
+			count++;
+			temp = temp->next;
+		}
+		
+	}
+	return count;
+}
