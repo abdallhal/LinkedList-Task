@@ -42,12 +42,12 @@ void LinkedList::Advance() {
 int LinkedList::ListSize() {
 	int count = 0;
 	Node* temp = head;
-	if(!isEmpty()) {
+	if (!isEmpty()) {
 		while (temp != nullptr) {
 			count++;
 			temp = temp->next;
 		}
-		
+
 	}
 	return count;
 }
@@ -60,4 +60,45 @@ void LinkedList::UpdateKey(int newKey) {
 	if (!CursorIsEmpty()) {
 		cursor->key = newKey;
 	}
-}	
+}
+
+char LinkedList::GetData() {
+	return cursor->data;
+}
+void LinkedList::GetData(char& data) {
+	data = cursor->data;	
+}
+int LinkedList::GetKey() {
+	return cursor->key;
+}
+void LinkedList::GetKey(int& key) {
+	key = cursor->key;	
+}
+void LinkedList::InsertFirst(int key, char data) {
+	Node* newNode= new Node;
+	newNode->key = key;	
+	newNode->data = data;
+	newNode->next = head;
+	head = newNode;
+	cursor = head;
+	prev = nullptr;
+}
+void LinkedList::InsertAfter(int key, char data) {
+	Node* newNode = new Node;
+	newNode->key = key;
+	newNode->data = data;
+	newNode->next = cursor->next;
+	cursor->next = newNode;
+	prev = cursor;
+	cursor = newNode;
+
+}
+
+void LinkedList::InsertBefore(int key, char data) {
+	Node* newNode = new Node;
+	newNode->key = key;
+	newNode->data = data;
+	newNode->next = cursor;
+	prev->next = newNode;
+	cursor = newNode;
+}
