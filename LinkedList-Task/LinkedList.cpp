@@ -51,3 +51,8 @@ int LinkedList::ListSize() {
 	}
 	return count;
 }
+void LinkedList::UpdateData(char newData) {
+	if (!CursorIsEmpty()) {
+		cursor->data = newData;
+	}
+}

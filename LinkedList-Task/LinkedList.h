@@ -27,6 +27,7 @@ public:
 	bool AtEnd();
 	void Advance();
 	int ListSize();
+	void UpdateData(char newData);
 
 
 };
