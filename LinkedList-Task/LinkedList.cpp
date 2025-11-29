@@ -18,3 +18,9 @@ bool LinkedList::AtFirst() {
 	// if cursor is at head or list is empty and cursor is also empty
 	return (cursor == head)||(isEmpty()&&CursorIsEmpty());	
 }
+void LinkedList::Advance() {
+
+	if (!CursorIsEmpty()) {
+		prev = cursor;
+		cursor = cursor->next;
+	}

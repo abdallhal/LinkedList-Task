@@ -23,6 +23,7 @@ public:
 	bool CursorIsEmpty();
 	void ToFirst();
 	bool AtFirst();
+	void Advance();
 
 
 };
