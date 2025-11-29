@@ -93,6 +93,16 @@ void LinkedList::InsertAfter(int key, char data) {
 	cursor = newNode;
 
 }
+void LinkedList::InsertEnd(int key, char data) {
+	if (isEmpty()) {
+		InsertFirst(key, data);
+	}
+	else {
+		ToEnd();
+		InsertAfter(key, data);
+	}
+
+}
 
 void LinkedList::InsertBefore(int key, char data) {
 	Node* newNode = new Node;

@@ -36,5 +36,6 @@ public:
 	void InsertFirst(int key, char data);
 	void InsertAfter(int key, char data);
 	void InsertBefore(int key, char data);
+	void InsertEnd(int key, char data);
 };
 
