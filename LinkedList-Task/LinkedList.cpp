@@ -56,3 +56,8 @@ void LinkedList::UpdateData(char newData) {
 		cursor->data = newData;
 	}
 }
+void LinkedList::UpdateKey(int newKey) {
+	if (!CursorIsEmpty()) {
+		cursor->key = newKey;
+	}
+}	

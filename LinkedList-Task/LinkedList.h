@@ -28,6 +28,7 @@ public:
 	void Advance();
 	int ListSize();
 	void UpdateData(char newData);
+	void UpdateKey(int newKey);
 
 
 };
